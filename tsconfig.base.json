@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@lowcode/components": [
+        "packages/component-library/src"
+      ],
+      "@lowcode/runtime": [
+        "packages/runtime/src"
+      ],
+      "@lowcode/data-center": [
+        "packages/data-center/src"
+      ]
+    }
+  }
+}
