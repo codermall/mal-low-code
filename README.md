@@ -16,6 +16,11 @@ pnpm dev # 启动编辑器
 
 可通过 `pnpm --filter @lowcode/runtime dev` 启动渲染引擎示例。
 
+### 构建与测试
+- `pnpm test`：运行所有包的 Vitest 用例（组件库、运行时、数据中心、编辑器）
+- `pnpm build`：依次执行各包构建（tsc/Vite）
+- `pnpm lint`：基于 TypeScript 严格模式的静态检查
+
 ### 技术栈
 - React + TypeScript
 - Vite 构建

@@ -8,8 +8,9 @@
   "include": [
     "src",
     "vite.config.ts",
+    "vitest.config.ts",
     "../component-library/src",
-    "../runtime/src",
-    "../data-center/src"
+    "../data-center/src",
+    "../runtime/src"
   ]
 }

@@ -2,3 +2,5 @@ node_modules
 dist
 dist-app
 packages/*/dist
+coverage
+**/tsconfig.tsbuildinfo

@@ -2,7 +2,7 @@ import { EditorDataCenter } from "@lowcode/data-center";
 import { componentList, componentRegistry } from "@lowcode/components";
 import type { ComponentNode, EditorState, NodeId } from "@lowcode/data-center";
 
-class EditorController {
+export class EditorController {
   private dataCenter: EditorDataCenter;
 
   constructor() {

@@ -1,11 +1,15 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "rootDir": "../",
     "outDir": "dist",
     "composite": true
   },
   "include": [
     "src",
-    "vite.config.ts"
+    "vite.config.ts",
+    "vitest.config.ts",
+    "../component-library/src",
+    "../data-center/src"
   ]
 }
