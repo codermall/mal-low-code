@@ -4,6 +4,7 @@ import { editorController } from "./editorController";
 
 const dataCenter = editorController.getDataCenter();
 
+// 基于 useSyncExternalStore 订阅 schema/selection，保证 React 兼容性
 export const useEditorState = (): EditorState =>
   useSyncExternalStore(
     (listener) => {

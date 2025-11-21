@@ -1,5 +1,6 @@
 import type { ComponentNode } from "@lowcode/data-center";
 
+// 供运行时独立演示的默认页面结构
 export const sampleSchema: ComponentNode[] = [
   {
     id: "hero-text",

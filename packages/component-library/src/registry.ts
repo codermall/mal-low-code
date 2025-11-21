@@ -3,6 +3,7 @@ import { ImageBlock, type ImageBlockProps } from "./components/ImageBlock";
 import { TextBlock, type TextBlockProps } from "./components/TextBlock";
 import type { ComponentDefinition, ComponentRegistry } from "./types";
 
+// 文本组件的注册信息：默认值 + 属性 schema
 const textDefinition: ComponentDefinition<TextBlockProps> = {
   type: "text",
   displayName: "文本",
@@ -22,6 +23,7 @@ const textDefinition: ComponentDefinition<TextBlockProps> = {
   ]
 };
 
+// 按钮组件注册信息
 const buttonDefinition: ComponentDefinition<ActionButtonProps> = {
   type: "button",
   displayName: "按钮",
@@ -38,6 +40,7 @@ const buttonDefinition: ComponentDefinition<ActionButtonProps> = {
   ]
 };
 
+// 图片组件注册信息
 const imageDefinition: ComponentDefinition<ImageBlockProps> = {
   type: "image",
   displayName: "图片",
@@ -56,10 +59,12 @@ const imageDefinition: ComponentDefinition<ImageBlockProps> = {
   ]
 };
 
+// 以组件类型为 key 形成可查找的注册表
 export const componentRegistry: ComponentRegistry = {
   text: textDefinition,
   button: buttonDefinition,
   image: imageDefinition
 };
 
+// 供编辑器 Palette 直接使用的扁平数组
 export const componentList: ComponentDefinition[] = Object.values(componentRegistry);

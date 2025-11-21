@@ -2,6 +2,7 @@ import { EditorDataCenter } from "@lowcode/data-center";
 import { componentList, componentRegistry } from "@lowcode/components";
 import type { ComponentNode, EditorState, NodeId } from "@lowcode/data-center";
 
+// 控制器封装了数据中心操作，供 UI 层直接调用
 export class EditorController {
   private dataCenter: EditorDataCenter;
 

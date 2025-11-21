@@ -4,6 +4,7 @@ import { beginComponentDrag } from "../core/dragDrop";
 
 const paletteItems = editorController.getPalette();
 
+// 左侧组件面板：列出所有可拖拽的业务组件
 export const Palette = () => {
   return (
     <div className="panel">
@@ -15,6 +16,7 @@ export const Palette = () => {
   );
 };
 
+// 单个组件条目的渲染，同时挂载拖拽事件
 const PaletteItem = ({ component }: { component: ComponentDefinition }) => (
   <div
     className="palette-item"

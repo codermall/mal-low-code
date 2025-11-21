@@ -9,6 +9,7 @@ interface CanvasProps {
   onSelectNode: (id: string) => void;
 }
 
+// 中间画布区域：负责接受拖拽以及展示实时渲染结果
 export const Canvas = ({ schema, onDropComponent, onSelectNode }: CanvasProps) => {
   const handleDrop: React.DragEventHandler<HTMLDivElement> = (event) => {
     event.preventDefault();

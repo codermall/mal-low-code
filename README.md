@@ -16,6 +16,23 @@ pnpm dev # 启动编辑器
 
 可通过 `pnpm --filter @lowcode/runtime dev` 启动渲染引擎示例。
 
+### 架构图
+```mermaid
+graph LR
+  subgraph Workspace
+    editor["@lowcode/editor\nVite + React 编辑器"]
+    runtime["@lowcode/runtime\n运行态渲染器"]
+    components["@lowcode/components\n组件库"]
+    datacenter["@lowcode/data-center\nSchema 数据中心"]
+  end
+
+  components --> editor
+  components --> runtime
+  datacenter --> editor
+  datacenter --> runtime
+  editor -->|Schema 导出| runtime
+```
+
 ### 构建与测试
 - `pnpm test`：运行所有包的 Vitest 用例（组件库、运行时、数据中心、编辑器）
 - `pnpm build`：依次执行各包构建（tsc/Vite）

@@ -6,6 +6,7 @@ interface InspectorProps {
   onChange: (patch: Record<string, unknown>) => void;
 }
 
+// 右侧属性面板：根据组件 schema 动态渲染输入控件
 export const Inspector = ({ node, onChange }: InspectorProps) => {
   if (!node) {
     return (

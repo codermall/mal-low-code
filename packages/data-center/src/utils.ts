@@ -1,5 +1,6 @@
 import type { ComponentNode, NodeId } from "./types";
 
+// 通过自增 seed 生成可预测的节点 ID，方便调试
 let seed = 0;
 
 export const generateNodeId = () => {
@@ -7,6 +8,7 @@ export const generateNodeId = () => {
   return `node_${seed.toString(36)}`;
 };
 
+// 深拷贝节点数组，确保 undo/redo 等场景的数据安全
 export const cloneNodes = (nodes: ComponentNode[]): ComponentNode[] =>
   nodes.map((node) => ({
     ...node,
@@ -15,6 +17,7 @@ export const cloneNodes = (nodes: ComponentNode[]): ComponentNode[] =>
     children: node.children ? cloneNodes(node.children) : undefined
   }));
 
+// 遍历树并更新指定节点
 export const updateNodeById = (
   nodes: ComponentNode[],
   nodeId: NodeId,
@@ -33,6 +36,7 @@ export const updateNodeById = (
   });
 };
 
+// 将节点插入根节点或指定父节点
 export const appendNode = (nodes: ComponentNode[], node: ComponentNode, parentId?: NodeId): ComponentNode[] => {
   if (!parentId) {
     return [...nodes, node];

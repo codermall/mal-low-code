@@ -8,6 +8,7 @@ export interface RendererProps {
   canvasStyle?: CSSProperties;
 }
 
+// Runtime 渲染器：输入 schema，输出真实 DOM
 export const Renderer = ({ schema, onNodeClick, canvasStyle }: RendererProps) => {
   return (
     <div style={{ width: "100%", ...canvasStyle }}>
@@ -18,6 +19,7 @@ export const Renderer = ({ schema, onNodeClick, canvasStyle }: RendererProps) =>
   );
 };
 
+// 递归渲染单个节点，并处理缺失组件的兜底
 const RuntimeNode = ({
   node,
   onNodeClick
