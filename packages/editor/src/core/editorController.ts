@@ -31,7 +31,7 @@ export class EditorController {
   }
 
   getSnapshot(): EditorState {
-    return this.dataCenter.getState();
+    return this.dataCenter.getSnapshot();
   }
 
   addComponent(type: string) {

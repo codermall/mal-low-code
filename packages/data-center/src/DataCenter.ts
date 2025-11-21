@@ -20,6 +20,10 @@ export class EditorDataCenter {
   }
 
   getState(): EditorState {
+    return this.state;
+  }
+
+  getSnapshot(): EditorState {
     return cloneState(this.state);
   }
 
